@@ -8,3 +8,5 @@ migrations/versions/
 *.log
 
 logs/
+
+.vscode/
