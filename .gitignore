@@ -10,3 +10,13 @@ migrations/versions/
 logs/
 
 .vscode/
+
+.vagrant/
+
+Pipfile
+
+venv/
+
+vagrantfile
+
+Pipfile.lock
