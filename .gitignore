@@ -2,3 +2,9 @@
 __pycache__/
 
 migrations/versions/
+
+*.pyc
+
+*.log
+
+logs/
