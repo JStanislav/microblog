@@ -23,6 +23,9 @@ class EditProfileForm(FlaskForm):
             if user is not None:
                 raise ValidationError(_('Username already taken.'))
 
+class EmptyForm(FlaskForm):
+    submit = SubmitField('Submit')
+
 
 class PostForm(FlaskForm):
     post = TextAreaField(
@@ -39,3 +42,8 @@ class SearchForm(FlaskForm):
         if 'csrf_enabled' not in kwargs:
             kwargs['csrf_enabled'] = False
         super(SearchForm, self).__init__(*args, **kwargs)
+
+class MessageForm(FlaskForm):
+    message = TextAreaField(_l('Message'), validators=[
+        DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField(_l('Submit'))
